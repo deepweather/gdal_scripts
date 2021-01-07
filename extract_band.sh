@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ $# -lt 1 ]; then
 	echo 1>&2 "$0: use band number"
 elif [ $# -gt 1 ]; then
