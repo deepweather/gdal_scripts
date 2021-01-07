@@ -17,6 +17,7 @@ for i in $(ls);
 do 
   if [[ "$i" == *"pgrb2"* ]]; then 
   gdal_translate $i -b $1 ${i:22:2}_tmp.tif && gdalwarp -s_srs "+proj=longlat +ellps=WGS84" -t_srs WGS84 -te -180 -90 180 90  ${i:22:2}_tmp.tif ${i:22:2}_tmp_resampled.tif -wo SOURCE_EXTRA=1000
+  rm ${i:22:2}_tmp.tif
   fi
 done
 fi
