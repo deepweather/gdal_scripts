@@ -1,4 +1,7 @@
 #!/bin/bash
+# (c) Marvin Gabler
+# extracts the given raster band and converts the coordinate system to WGS84 -180 +180
+
 if [ $# -lt 3 ]; then
 	echo 1>&2 "Too few arguments. Usage: grib_cli.sh [band_number] [input_folder] [output_prefix]"
 elif [ $# -gt 3 ]; then
